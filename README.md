@@ -14,7 +14,7 @@ Permettre le reverse géocodage
 
 ## Plugin de base
 
-Le plugin qgis-geocoding : https://github.com/elpaso/qgis-geocoding.
+Le plugin de base est [qgis-geocoding](https://github.com/elpaso/qgis-geocoding)
 
 Ce plugin intègre la librairie GeoPy (dans libs/geopy) qui permet l'ajout de nouveaux géocodeurs
 
