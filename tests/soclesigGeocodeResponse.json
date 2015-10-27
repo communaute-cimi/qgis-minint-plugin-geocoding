@@ -1,0 +1,134 @@
+{
+   "spatialReference":    {
+      "wkid": 4326,
+      "latestWkid": 4326
+   },
+   "candidates":    [
+            {
+         "address": "91580, ÉTRÉCHY",
+         "location":          {
+            "x": 2.1892890545960464,
+            "y": 48.48978918977383
+         },
+         "score": 100,
+         "attributes":          {
+            "User_fld": "91226@1",
+            "Addr_type": "Chef lieu avec code postal",
+            "AddNumFrom": "",
+            "City": "ÉTRÉCHY",
+            "Postal": "91580",
+            "Region": "Île-de-France",
+            "SubRegion": "Essonne",
+            "Loc_name": "6_ChefLieu",
+            "StPreType": "",
+            "StName": "",
+            "Country": "FRA"
+         }
+      },
+            {
+         "address": "91580",
+         "location":          {
+            "x": 2.1899074525013873,
+            "y": 48.493507979283066
+         },
+         "score": 100,
+         "attributes":          {
+            "User_fld": "91580@1",
+            "Addr_type": "CodePostal",
+            "AddNumFrom": "",
+            "City": "",
+            "Postal": "91580",
+            "Region": "",
+            "SubRegion": "",
+            "Loc_name": "7_CodePostal",
+            "StPreType": "",
+            "StName": "",
+            "Country": "FRA"
+         }
+      },
+            {
+         "address": "ÉTRÉCHY",
+         "location":          {
+            "x": 2.1892896781540605,
+            "y": 48.48978871796832
+         },
+         "score": 100,
+         "attributes":          {
+            "User_fld": "91226@1",
+            "Addr_type": "Ville",
+            "AddNumFrom": "",
+            "City": "",
+            "Postal": "",
+            "Region": "",
+            "SubRegion": "",
+            "Loc_name": "8_Ville",
+            "StPreType": "",
+            "StName": "",
+            "Country": ""
+         }
+      },
+            {
+         "address": "ÉTRECHY, OSMERY",
+         "location":          {
+            "x": 2.618088971768186,
+            "y": 46.939239229576316
+         },
+         "score": 100,
+         "attributes":          {
+            "User_fld": "18173@1",
+            "Addr_type": "Ville",
+            "AddNumFrom": "",
+            "City": "OSMERY",
+            "Postal": "",
+            "Region": "Centre",
+            "SubRegion": "Cher",
+            "Loc_name": "8_Ville",
+            "StPreType": "",
+            "StName": "",
+            "Country": "FRA"
+         }
+      },
+            {
+         "address": "ÉTRÉCHY",
+         "location":          {
+            "x": 2.7252399171355606,
+            "y": 47.16174969035307
+         },
+         "score": 100,
+         "attributes":          {
+            "User_fld": "18090@1",
+            "Addr_type": "Ville",
+            "AddNumFrom": "",
+            "City": "",
+            "Postal": "",
+            "Region": "",
+            "SubRegion": "",
+            "Loc_name": "8_Ville",
+            "StPreType": "",
+            "StName": "",
+            "Country": ""
+         }
+      },
+            {
+         "address": "ÉTRÉCHY",
+         "location":          {
+            "x": 3.9437392231803106,
+            "y": 48.88410878337057
+         },
+         "score": 100,
+         "attributes":          {
+            "User_fld": "51239@1",
+            "Addr_type": "Ville",
+            "AddNumFrom": "",
+            "City": "",
+            "Postal": "",
+            "Region": "",
+            "SubRegion": "",
+            "Loc_name": "8_Ville",
+            "StPreType": "",
+            "StName": "",
+            "Country": ""
+         }
+      }
+   ]
+}

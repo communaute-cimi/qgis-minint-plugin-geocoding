@@ -1,0 +1,116 @@
+on": "draft",
+    "limit": 5,
+    "attribution": "BAN",
+    "licence": "ODbL 1.0",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    2.190631,
+                    48.492797
+                ]
+            },
+            "properties": {
+                "citycode": "91226",
+                "score": 0.4872181818181818,
+                "name": "Étréchy",
+                "id": "91226",
+                "adm_weight": "2",
+                "type": "town",
+                "label": "Étréchy",
+                "context": "91, Essonne, Île-de-France",
+                "city": "Étréchy",
+                "postcode": "91580",
+                "population": "6.3"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    2.179197,
+                    48.485544
+                ]
+            },
+            "properties": {
+                "citycode": "91226",
+                "score": 0.45010988142292485,
+                "name": "Rue Lulli",
+                "id": "91226_0460_75274f",
+                "city": "Étréchy",
+                "type": "street",
+                "label": "Rue Lulli 91580 Étréchy",
+                "context": "91, Essonne, Île-de-France",
+                "postcode": "91580"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    2.198813,
+                    48.495321
+                ]
+            },
+            "properties": {
+                "citycode": "91226",
+                "score": 0.42917575757575754,
+                "name": "Rue Racine",
+                "id": "91226_0557_a58b78",
+                "city": "Étréchy",
+                "type": "street",
+                "label": "Rue Racine 91580 Étréchy",
+                "context": "91, Essonne, Île-de-France",
+                "postcode": "91580"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    2.179445,
+                    48.491536
+                ]
+            },
+            "properties": {
+                "citycode": "91226",
+                "score": 0.4170676767676767,
+                "name": "Rue du Roussay",
+                "id": "91226_0595_b6eb58",
+                "city": "Étréchy",
+                "type": "street",
+                "label": "Rue du Roussay 91580 Étréchy",
+                "context": "91, Essonne, Île-de-France",
+                "postcode": "91580"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    2.186033,
+                    48.487212
+                ]
+            },
+            "properties": {
+                "citycode": "91226",
+                "score": 0.41674040404040397,
+                "name": "Rue du Coudray",
+                "id": "91226_0175_0ba50d",
+                "city": "Étréchy",
+                "type": "street",
+                "label": "Rue du Coudray 91580 Étréchy",
+                "context": "91, Essonne, Île-de-France",
+                "postcode": "91580"
+            }
+        }
+    ],
+    "query": "Etrechy 91580",
+    "type": "FeatureCollection"
+}
