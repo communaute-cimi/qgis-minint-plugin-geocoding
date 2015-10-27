@@ -2,7 +2,6 @@
 
 Plugin QGIS pour le géocodage sur le réseau du MININT
 
-
 ## Fonctionnalités cherchées :
 
 Permettre le géocodage sur :
