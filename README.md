@@ -45,7 +45,7 @@ Des fichiers .json dans le répertoire ./tests permettent de simuler une répons
 
 Appel : 
 
-http://facade.sig.psi.minint.fr/{token}/rest/services/geocoding/v1/geocode?singleline=91580%20Etrechy&outSR=4326
+http://host.minint.fr/{token}/rest/services/geocoding/v1/geocode?singleline=91580%20Etrechy&outSR=4326
 
 - {token} désigne un identifiant correspondant à une application
 - singleline : l'adresse recherchée
