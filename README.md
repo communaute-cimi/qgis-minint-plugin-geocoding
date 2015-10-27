@@ -6,8 +6,8 @@ Plugin QGIS pour le géocodage sur le réseau du MININT
 
 Permettre le géocodage sur :
 - Le socle SIG du ST(SI)²
-- Nominatim (en reverse proxy)
-- BAN (en reverse proxy)
+- Nominatim (en reverse proxy) : http://wiki.openstreetmap.org/wiki/Nominatim
+- La BAN  (en reverse proxy) : https://adresse.data.gouv.fr/api/
 - ... à qui le tour ;-)
 
 Permettre le reverse géocodage
