@@ -5,9 +5,10 @@ Plugin QGIS pour le géocodage sur le réseau du MININT
 ## Fonctionnalités cherchées :
 
 Permettre le géocodage sur :
-- Le socle SIG de la Sécurité Intérieure
+- Le socle SIG du ST(SI)²
 - Nominatim (en reverse proxy)
 - BAN (en reverse proxy)
+- ... à qui le tour ;-)
 
 Permettre le reverse géocodage
 
