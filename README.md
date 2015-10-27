@@ -18,10 +18,9 @@ Le plugin de base est [qgis-geocoding](https://github.com/elpaso/qgis-geocoding)
 
 Ce plugin intègre la librairie GeoPy (dans libs/geopy) qui permet l'ajout de nouveaux géocodeurs
 
-
 ## Plugin
 
-Le plugin est dans le répertoire ./dist
+Le plugin modifié est dans le répertoire ./dist
 
 ## Géocodeur du SOCLE SIG SI
 
