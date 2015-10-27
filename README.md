@@ -29,12 +29,12 @@ Les modifications sont relativement simples et portent sur l'url et les paramèt
 
 ## Gécodeur nominatim 
 
-Une adaptation de l'url est normalement la seule chose à faire.
-Il faut pouvoir passer en direct (problématique DNS à gérer)
+Une adaptation de l'url est normalement la seule chose à faire. Il faut pouvoir passer en direct (problématique DNS à gérer)
 
 ## Géocodeur BAN
 
 Mêmes choses à faire que pour le SOCLE
+
 Même problématique de DNS que Nominatim
 
 ## Tests
