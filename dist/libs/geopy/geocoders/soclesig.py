@@ -86,7 +86,7 @@ class Soclesig(Geocoder):
 
         # self.api = "%s://%s/search" % (self.scheme, self.domain)
         self.api = "%s://%s/geocode.json" % (self.scheme, self.domain)
-        self.reverse_api = "%s://%s/reverse" % (self.scheme, self.domain)
+        self.reverse_api = "%s://%s/reverseGeocode.json" % (self.scheme, self.domain)
 
 
     def geocode(
@@ -248,7 +248,7 @@ class Soclesig(Geocoder):
             params['accept-language'] = language
         url = "?".join((self.reverse_api, urlencode(params)))
         logger.debug("%s.reverse: %s", self.__class__.__name__, url)
-        return self._parse_json(
+        return self._parse_reverse_json(
             self._call_geocoder(url, timeout=timeout), exactly_one
         )
 
@@ -286,3 +286,20 @@ class Soclesig(Geocoder):
             return self.parse_code(candidates[0])
         else:
             return [self.parse_code(candidate) for candidate in candidates]
+        
+    def _parse_reverse_json(self, doc, exactly_one):
+        
+        addr = doc.get('address').get('Street', None) + " " + doc.get('address').get('Postal', None)
+        
+        x = doc['location'].get('x', None)
+        y = doc['location'].get('y', None)
+    
+        latitude = y
+        longitude = x
+        placename = addr
+        
+        if latitude and longitude:
+            latitude = float(latitude)
+            longitude = float(longitude)
+        return Location(placename, (latitude, longitude), doc)
+        
