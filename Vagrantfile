@@ -8,5 +8,4 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "hashicorp/precise32"
   config.vm.network :forwarded_port, guest: 80, host: 8080
   config.vm.provision :shell, :path => "vagrant-provision/bootstrap.sh"
-  config.vm.network :public_network
 end

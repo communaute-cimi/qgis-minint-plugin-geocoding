@@ -6,5 +6,3 @@ apt-get install -y curl
 
 cp /vagrant/vagrant-provision/etc/apache2/sites-available/default /etc/apache2/sites-available
 service apache2 restart
-
-ifconfig eth1 | grep "inet addr"
