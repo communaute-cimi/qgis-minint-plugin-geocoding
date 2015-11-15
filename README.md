@@ -2,6 +2,25 @@
 
 Plugin QGIS pour le géocodage sur le réseau du MININT
 
+## VAGRANT
+
+En dev vous pouvez utiliser vagrant
+Virtual box doit être installé (quel que soit l'OS)
+
+```sh
+# Récupérer les sources de ce projet
+git clone https://github.com/communaute-cimi/qgis-minint-plugin-geocoding.git
+
+# Installer Vagrant (debian)
+apt-get insall vagrant
+
+# Dans le répertoire sources
+vagrant up
+
+# Vérifier le fichier de test : 
+curl http://127.0.0.1:8080/soclesigReverseGeocodeResponse.json
+{"location":{"x":2.3642342330004453,"y":48.82066720000046,"spatialReference":{"wkid":102110,"latestWkid":2154}},"address":{"Street":"37 BOULEVARD VICTOR","Postal":"75015","City":"PARIS 15","Loc_name":"2_AdressInter"}}
+```
 ## Fonctionnalités cherchées :
 
 Permettre le géocodage sur :
