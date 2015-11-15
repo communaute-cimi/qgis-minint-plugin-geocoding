@@ -19,10 +19,12 @@ vagrant up
 # Vérifier les fichiers de test : 
 # Géocodage sur le socle
 curl http://127.0.0.1:8080/soclesigGeocodeResponse.json
+# retourne
 {"spatialReference":{"wkid":4326,"latestWkid":4326},"candidates":[{"address":"91580, Etrechy","location":{"x":2.1892890545960464,"y":48.48978918977383}}]}
 
 # Reverse sur le socle
 curl http://127.0.0.1:8080/soclesigReverseGeocodeResponse.json
+# retourne
 {"location":{"x":2.3642342330004453,"y":48.82066720000046,"spatialReference":{"wkid":102110,"latestWkid":2154}},"address":{"Street":"37 BOULEVARD VICTOR","Postal":"75015","City":"PARIS 15","Loc_name":"2_AdressInter"}}
 ```
 ## Fonctionnalités cherchées :
