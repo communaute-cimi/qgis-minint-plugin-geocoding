@@ -44,7 +44,8 @@ class Soclesig(Geocoder):
             #domain='nominatim.openstreetmap.org',
             domain='localhost',
             # scheme=DEFAULT_SCHEME
-            scheme='http'
+            scheme='http',
+            port = '8080'
     ):  # pylint: disable=R0913
         """
         :param string format_string: String containing '%s' where the
@@ -83,10 +84,12 @@ class Soclesig(Geocoder):
         self.view_box = view_box
         self.country_bias = country_bias
         self.domain = domain.strip('/')
-
+        self.port = port
+        
         # self.api = "%s://%s/search" % (self.scheme, self.domain)
-        self.api = "%s://%s/geocode.json" % (self.scheme, self.domain)
-        self.reverse_api = "%s://%s/reverseGeocode.json" % (self.scheme, self.domain)
+        self.api = "%s://%s:%s/soclesigGeocodeResponse.json" % (self.scheme, self.domain, self.port)
+        # self.reverse_api = "%s://%s/reverseGeocode.json" % (self.scheme, self.domain)
+        self.reverse_api = "%s://%s:%s/soclesigReverseGeocodeResponse.json" % (self.scheme, self.domain, self.port)
 
 
     def geocode(
@@ -248,10 +251,10 @@ class Soclesig(Geocoder):
             params['accept-language'] = language
         url = "?".join((self.reverse_api, urlencode(params)))
         logger.debug("%s.reverse: %s", self.__class__.__name__, url)
-        return self._parse_reverse_json(
+        return self._parse_json_rev(
             self._call_geocoder(url, timeout=timeout), exactly_one
         )
-
+    
     @staticmethod
     def parse_code(candidate):
         """
@@ -271,10 +274,34 @@ class Soclesig(Geocoder):
             longitude = float(longitude)
         return Location(placename, (latitude, longitude), candidate)
 
+    def _parse_json_rev(self, places, exactly_one):
+        
+        if places is None:
+            return None
+        if not isinstance(places, list):
+            places = [places]
+        if not len(places):
+            return None
+        if exactly_one is True:
+            return self.parse_code_rev(places[0])
+        else:
+            return [self.parse_code_rev(place) for place in places]
+
+    @staticmethod
+    def parse_code_rev(place):
+        """
+        Parse each resource.
+        """
+        latitude = place.get('location').get('y', None)
+        longitude = place.get('location').get('x', None)
+        placename = place['address'].get('Street', None) + " " + place['address'].get('Postal', None) + " " + place['address'].get('City', None)
+        if latitude and longitude:
+            latitude = float(latitude)
+            longitude = float(longitude)
+        return Location(placename, (latitude, longitude), place)
+
     def _parse_json(self, doc, exactly_one):
         candidates = doc['candidates']
-        # pprint.pprint()
-        # return 0
 
         if candidates is None:
             return None
@@ -289,8 +316,8 @@ class Soclesig(Geocoder):
         
     def _parse_reverse_json(self, doc, exactly_one):
         
-        addr = doc.get('address').get('Street', None) + " " + doc.get('address').get('Postal', None)
-        
+        # addr = doc.get('address').get('Street', None) + " " + doc.get('address').get('Postal', None)
+        addr = doc.get('address').get('Postal', None)
         x = doc['location'].get('x', None)
         y = doc['location'].get('y', None)
     
