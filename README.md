@@ -4,8 +4,7 @@ Plugin QGIS pour le géocodage sur le réseau du MININT
 
 ## VAGRANT
 
-En dev vous pouvez utiliser vagrant
-Virtual box doit être installé (quel que soit l'OS)
+En dev vous pouvez utiliser vagrant, virtual box doit être installé (quel que soit l'OS)
 
 ```sh
 # Récupérer les sources de ce projet
@@ -17,19 +16,21 @@ apt-get insall vagrant
 # Dans le répertoire sources
 vagrant up
 
-# Vérifier le fichier de test : 
+# Vérifier les fichiers de test : 
+# Géocodage sur le socle
+curl http://127.0.0.1:8080/soclesigGeocodeResponse.json
+{"spatialReference":{"wkid":4326,"latestWkid":4326},"candidates":[{"address":"91580, Etrechy","location":{"x":2.1892890545960464,"y":48.48978918977383}}]}
+
+# Reverse sur le socle
 curl http://127.0.0.1:8080/soclesigReverseGeocodeResponse.json
 {"location":{"x":2.3642342330004453,"y":48.82066720000046,"spatialReference":{"wkid":102110,"latestWkid":2154}},"address":{"Street":"37 BOULEVARD VICTOR","Postal":"75015","City":"PARIS 15","Loc_name":"2_AdressInter"}}
 ```
 ## Fonctionnalités cherchées :
 
-Permettre le géocodage sur :
-- Le socle SIG du ST(SI)²
+Géocodage et reverse géocodage sur :
+- Le socle SIG du ST(SI)² (périmètre sécurité intérieure)
 - Nominatim (en reverse proxy) : http://wiki.openstreetmap.org/wiki/Nominatim
 - La BAN  (en reverse proxy) : https://adresse.data.gouv.fr/api/
-- ... à qui le tour ;-)
-
-Permettre le reverse géocodage
 
 ## Plugin de base
 
