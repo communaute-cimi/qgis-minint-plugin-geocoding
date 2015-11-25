@@ -1,6 +1,6 @@
 [general]
-name:GeoCoding
-description:GeoCoding and reverse GeoCoding using Nominatim and Google web services
+name:GeoCoding - modifié MININT
+description:Géocodage et géocodage inverse sur le réseau MININT
 
 email:apasotti@gmail.com
 author:Alessandro Pasotti
@@ -13,7 +13,7 @@ homepage:http://www.itopen.it/2009/06/05/geocoding-qgis-plugins-released/
 repository:https://github.com/elpaso/qgis-geocoding
 tracker:https://github.com/elpaso/qgis-geocoding/issues
 
-about:This plugin allows the user to search for an address and get its coordinates (geocoding) using GeoCoding using Nominatim and Google web services. It also allows to get the address of a point by clicking on the map canvas (reverse geocoding).
+about:Ce plugin permet le géocodage et le géocodage inverse sur le réseau du Ministère de l'Intérieur sur plusieurs géocodeurs.
 
 changelog:
     Version 2.11:
